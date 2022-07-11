@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: ipadla/api_yamdb:latest
+    image: ipadla/api_yamdb:v1.0
     restart: always
     volumes:
       - static_value:/app/static/
