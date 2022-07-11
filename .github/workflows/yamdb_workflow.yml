@@ -69,7 +69,7 @@ jobs:
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
-    if: ${{ secrets.TELEGRAM_TO && secrets.TELEGRAM_TOKEN }}
+    if: ${{ (secrets.TELEGRAM_TO) && (secrets.TELEGRAM_TOKEN) }}
     steps:
       - name: send message
         uses: appleboy/telegram-action@master
