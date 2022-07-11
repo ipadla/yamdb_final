@@ -19,6 +19,7 @@ api_yamdb
 infra/.env:
 
  * SECRET_KEY - Используемый Django секретный ключ
+ * DB_ENGINE - движок базы данных (ex. django.db.backends.postgresql)
  * DB_NAME - имя базы данных (ex. postgres)
  * POSTGRES_USER - Пользователь базы данных (ex. postgres)
  * POSTGRES_PASSWORD - Пароль рользователя базы данных (ex. postgres)
