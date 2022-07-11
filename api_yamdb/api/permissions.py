@@ -9,6 +9,8 @@ class IsAdminOrReadOnly(permissions.BasePermission):
         if request.user.is_authenticated:
             return bool(request.user.is_staff or request.user.role == 'admin')
 
+        return False
+
 
 class IsModeratorOrReadOnly(permissions.BasePermission):
 

@@ -2,16 +2,15 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import EmailMessage
 from django.shortcuts import get_object_or_404
-from rest_framework import permissions, views
-from rest_framework import filters, mixins, status, viewsets
+from rest_framework import (filters, mixins, permissions, status, views,
+                            viewsets)
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from users.serializers import AuthUserSerializer, SignupUserSerializer
-from users.serializers import UserSerializer
 from users.permissions import IsAdmin
+from users.serializers import (AuthUserSerializer, SignupUserSerializer,
+                               UserSerializer)
 
 User = get_user_model()
 

@@ -1,11 +1,10 @@
 from csv import DictReader
 
+from api.models.api import Category, Comment, Genre, Review, Title
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from django.core.management.base import BaseCommand
-
-from api.models.api import Comment, Review, Category, Genre, Title
 
 User = get_user_model()
 
